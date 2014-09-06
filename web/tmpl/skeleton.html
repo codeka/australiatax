@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <title>{% block pagetitleprefix %}Australia Tax &bull; {% endblock %}{% block pagetitle %}are you paying too much?{% endblock %}</title>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="/v{{resource_version}}/css/reset.css">
+  <link rel="stylesheet" href="/v{{resource_version}}/css/style.css">
+  <link rel="stylesheet" href="/v{{resource_version}}/css/mobile.css" media="only screen and (max-width: 900px)" />
+{%- block header %}{% endblock %}
+</head>
+<body>
+  <header id="page-header">
+    <div class="logo-container"><img src="/v{{resource_version}}/img/logo.png" width="128" height="64" /></div>
+    <h1>Australia Tax</h1>
+    <h2>Are you paying too much?</h2>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a>
+        <li><a href="/products">Products</a>
+        <li><a href="/companies">Companies</a>
+        <li><a href="/contact">Contact us</a>
+      </ul>
+    </nav>
+  </header>
+{%- block maincontent %}{% endblock -%}
+</body>

@@ -1,0 +1,67 @@
+{% extends "skeleton.html" %}
+
+{% block header %}
+  <style>
+    section.prices {
+      position: relative;
+      height: 150px;
+    }
+    
+    section.prices div.au-price {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      text-align: center;
+    }
+    
+    section.prices div.cheaper-price {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      right: 0;
+      text-align: center;
+    }
+    
+    section.prices div.australia-tax {
+      position: absolute;
+      left: 0; right: 0;
+      top: 70px;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .hero-img img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+{% endblock %}
+
+{% block maincontent %}
+  <section id="main-content">
+    <p>
+      <a href="/products">&#x02190; Back</a>
+      <a href="/products/{{product.company.slug}}/{{product.slug}}/edit">Edit Entry</a>
+    </p>
+    <h1>
+      <a href="/companies/{{product.company.slug}}">{{product.company.name}}</a>
+      {{product.name}}
+    </h1>
+    <div class="hero-img"><img src="/products/{{product.company.slug}}/{{product.slug}}/img?width=900&height=400"></div>
+    <section class="prices">
+      <div class="au-price">
+        <h2>Price in Australia</h2>
+        <div class="price">${{product.auPrice|number}}</div>
+      </div>
+      <div class="cheaper-price">
+        <h2>Price in U.S.</h2>
+        <div class="price">${{product.cheaperPrice|number}}</div>
+      </div>
+      <div class="australia-tax">
+        Australia tax: ${{(product.auPrice-product.cheaperPrice)|number}}
+      </div>
+    </section>
+  </section>
+{% endblock %}

@@ -1,0 +1,120 @@
+
+body {
+  font-family: helvetica, arial, serif;
+  font-size: 12pt;
+  background: #fff
+  color: #222;
+}
+
+#page-header {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  height: 80px;
+}
+
+#page-header .logo-container {
+  float: left;
+}
+
+#page-header .logo-container img {
+  margin: 4pt 8pt 4pt 0;
+}
+
+#page-header h1 {
+  font-size: 32pt;
+}
+
+#page-header nav ul {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#page-header nav ul li {
+  display: inline;
+}
+
+#main-content {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1 { font-size: 24pt; }
+h2 { font-size: 20pt; }
+h3 { font-size: 16pt; }
+h4 { font-size: 14pt; }
+p { margin-top: 10pt; margin-bottom: 10pt; }
+
+
+.product-list-entry {
+  position: relative;
+  height: 100px;
+  border-top: dotted 1px #999;
+}
+
+.product-list-entry:nth-child(1) {
+  border-top: none;
+}
+
+.product-list-entry a {
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.product-list-entry .image-container {
+  float: left;
+  width: 128px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.product-list-entry img {
+  vertical-align: middle;
+}
+
+.product-list-entry h2 {
+  position: absolute;
+  top: 4px;
+  left: 140px;
+  color: #222;
+}
+
+.product-list-entry h3 {
+  position: absolute;
+  top: 34px;
+  left: 140px;
+  color: #222;
+}
+
+.product-list-entry div.cheaper-price {
+  position: absolute;
+  left: 50%;
+  height: 100px;
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.product-list-entry div.au-price {
+  position: absolute;
+  left: 70%;
+  height: 100px;
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.product-list-entry div.price-difference {
+  position: absolute;
+  right: 0;
+  height: 100px;
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #a00;
+}

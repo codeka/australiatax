@@ -1,0 +1,73 @@
+{% extends "skeleton.html" %}
+
+{% block header %}
+    <style>
+    </style>
+{% endblock %}
+
+{% block maincontent %}
+  <section id="main-content">
+    
+    <h1>New Product</h1>
+    <p>Submit details of a new product using the form below. Your entry must be approved by a moderator before
+    it will appear on the website, so please be patient.</p>
+    <form method="post" enctype="multipart/form-data">
+      <fieldset>
+        <div>
+          <label for="company">Company</label>
+          <input type="text" name="company" id="company" placeholder="Who makes this product?">
+        </div>
+        <div>
+          <label for="name">Product name</label>
+          <input type="text" name="name" id="name" placeholder="The name of the product">
+        </div>
+        <div>
+          <label for="picture">Picture</label>
+          <input type="file" name="picture" id="picture" placeholder="A picture of the product">
+        </div>
+        <div>
+          <label for="au-price">Price in Australia</label>
+          $<input type="text" name="au-price" id="au-price" placeholder="The cost of the product in Australia">
+        </div>
+        <div>
+          <input type="checkbox" id="includes-gst" name="includes-gst">
+          <label for="includes-gst">Australian price includes GST</label>
+        </div>
+        <div>
+          <label for="country-available">Cheaper country</label>
+          <select name="country-available" id="country-available">
+            <option>UK
+            <option>USA
+            <option>Other
+          </select>
+        </div>
+        <div>
+          <label for="overseas-price">Price</label>
+          <select name="overseas-currency">
+            <option>USD $
+            <option>AUD $
+            <option>GPB £
+          </select>
+          <input type="text" name="overseas-price" id="overseas-price" placeholder="Price of the product in the country you listed">
+        </div>
+        <div>
+          <input type="checkbox" name="overseas-tax" id="overseas-tax">
+          <label for="overseas-tax">Overseas price includes tax</label>
+        </div>
+        <div>
+          <label for="proof">Proof</label>
+          <input type="text" name="proof" id="proof" placeholder="Link(s) to proof, eg screenshots, product pages etc.">
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea name="description" id="description" rows="10" cols="80"></textarea>
+        </div>
+        <div>
+          <label for="description">Notes</label>
+          <textarea name="notes" id="notes" rows="10" cols="80"></textarea>
+        </div>
+        <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+  </section>
+{% endblock %}

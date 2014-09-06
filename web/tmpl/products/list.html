@@ -1,0 +1,21 @@
+{% extends "skeleton.html" %}
+
+{% block maincontent %}
+  <section id="main-content">
+    <p><a href="/products/new">Submit Product</a></p>
+    <section class="products">
+    {%- for product in products %}
+      <div class="product-list-entry"><a href="/products/{{product.company.slug}}/{{product.slug}}">
+        <div class="image-container">
+          <img src="/products/{{product.company.slug}}/{{product.slug}}/img?width=128" width="128">
+        </div>
+        <h2>{{product.company.name}}</h2>
+        <h3>{{product.name}}</h3>
+        <div class="cheaper-price">US $ {{product.cheaperPrice}}</div>
+        <div class="au-price">AU $ {{product.auPrice}}</div>
+        <div class="price-difference">+ $ {{product.auPrice - product.cheaperPrice}}</div>
+      </a></div>
+    {%- endfor -%}
+    </setion>
+  </section>
+{% endblock %}
